@@ -1,0 +1,666 @@
+.main{
+    width: 1400px;
+    height: 725px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+}
+
+form{
+    display: inline-block;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    height: 100vh; 
+}
+
+.logo{
+    width: 140px;
+    margin: 0px;
+    position: fixed;
+    justify-content: flex-start;
+    margin-right: 1230px;
+}
+
+.nav-bar{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; 
+    /* border-bottom: solid rgba(0, 40, 43, 0.7); */
+    align-items: center; 
+
+}
+
+.lower-div{
+    display: flex;
+}
+
+
+.redirect-links a{
+    text-decoration: none;
+    display: inline-block;
+    margin:  15px;
+    font-weight: 600;
+    font-size: 15px;
+    color: rgba(0, 40, 43, 0.75);
+    
+}
+
+.left-side-div{
+    margin-top: 20px;
+    height: 600px;
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+    position: fixed;
+    border-top: solid 1px rgba(128, 128, 128, 0.3);
+}
+
+.right-side-div{
+    margin-top: 20px;
+    height: 600px;
+    width: 1190px;
+    display: inline-block;
+    margin-left: 200px;
+    border-top: solid 1px rgba(128, 128, 128, 0.3);
+    
+}
+
+.sort-div h1{
+    margin-top: 25px;
+    font-weight: 400;
+    font-size: large;
+    display: inline-block;
+}
+
+.drop-down{
+    padding: 5px;
+    border: solid 2px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.drop-down-items{
+    font-size: 17px;    
+}
+
+.active-page{
+    margin-top: 75px;
+    text-align: left;
+}
+
+
+.active-page a{
+    display: block;
+    color: rgba(0, 0, 0, 0.4);
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+    margin:  5px 0px;
+
+}
+
+.active-page a.active {
+    color: black; 
+}
+
+.tshirt-back{
+    height: 280px;
+    width: 220px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.margin{
+    margin: 15px 100px;
+}
+
+/* .margin-cart{
+    margin: 15px ;
+} */
+
+.tshirt-image{
+    height: 230px;
+    text-align: center;
+    background-color: rgba(189, 186, 186, 0.7);
+    position: relative;
+
+}
+
+.tshirt-image img{
+    height: 100%;
+    z-index: -1;
+}
+
+.add-to-cart{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 1;
+    font-weight: 600;
+    font-size: 15px;
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+}
+
+.tshirt-price{
+    background-color: #7C7C7C;
+    height: 50px;
+    align-items: center;
+    padding-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.tshirt-price h1{
+    margin: -2px ;
+    font-size: 22px;
+}
+
+.tshirt-price h3{
+    margin: 0px ;
+    font-size: 15px;
+}
+
+.t-shirt-description{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.discount{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+
+
+
+
+.price-display{
+    display: inline-block;
+}
+
+.discount-display{
+    display: inline-block;
+
+}
+
+
+.add-button{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+    font-size: 19px;
+
+}
+
+
+
+.add-button:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.add-button a{
+    font-size: 24px;  
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
+
+.adminProducts{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 5px 25px;
+    border: solid 1.5px gray;
+    border-radius: 5px;
+    margin: 20px ;
+    
+}
+
+.adminProducts:hover{
+    color: black;
+}
+
+.adminDiv{
+    text-align: center;
+    margin-top: 300px;   
+    display: block;
+}
+
+.DeleteAll{
+    text-align: left;
+    color: red;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 9px;
+}
+
+.DeleteAll:hover{
+    color: brown;
+}
+
+.TshirtDisplayDiv{
+    margin: 0px;
+}
+
+.vend-tshirt-display{
+    text-align: center;
+    margin-top: 50px;
+    background-color: #F8EDED;
+    width: 290px ;
+    height: 280px;
+    padding: 10px;
+    padding-left: 0;
+    display: inline-block;
+    position: relative;
+
+}
+
+.vend-tshirt-display img{
+    height: 250px;
+}
+
+.vend-tshirt-description{
+    background-color: #DFB0B0;
+    width: 100%;
+    height: 15px;
+    padding: 10px 0px 10px 10px;
+    height: 20px;
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vend-tshirt-display h1{
+    font-weight: 800;
+    margin-right: 10px;
+    font-size: large;
+    color: rgba(0, 0, 0, 0.35);
+    
+}
+
+.delete-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.delete-button:hover {
+    background-color: red;
+}
+
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+.vend-tshirt-total{
+    background-color: #BE9393;
+    width: 100%;
+    height: 20px;
+    padding: 10px 0px 10px 10px;
+}
+
+.add-quantity{
+    height: 25px;
+    width: 25px;
+    margin-right: 0px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+.add-quantity a{
+    font-size: 18px;  
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}
+
+.sub-quantity{
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+.sub-quantity a{
+    font-size: 18px;  
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}
+
+.vend-tshirt-total{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.price-total{
+    height: 325px;
+    width: 500px;  
+    display: inline-block; 
+    margin-left: 50px;
+    
+}
+
+.price-total h1{
+    font-weight: 500;
+}
+
+
+.price-total-div{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;   
+}
+
+.price-total-div h1{
+    font-weight: 500;
+    margin: 3px;
+    font-size: 25px;
+}
+
+.price-total-div h3 {
+    margin: 2px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.PlaceOrderButton{
+    color: white;
+    background-color: black;
+    padding:  5px 10px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.PlaceOrderButton:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.right-side-div h1{
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.admin-heading h1{
+    font-size: 30px;
+    margin-left: -5px;
+    font-weight: 300;
+}
+
+.admin-heading{
+    margin-top: 23px;
+    border-bottom: solid 3px rgba(0, 38, 41, 0.25);
+    padding-bottom: 15px;
+}
+
+.create-products h2{
+    font-weight: 400;
+}
+
+.create-products h3{
+    font-weight: 400;
+    display: inline-block;
+}
+
+.image-input {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #02767e;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+
+.input-product-description{
+    font-family: "Inter" , sans-serif;
+    font-size: 15px;
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 345px;
+    padding: 10px;
+    outline: none;
+    background-color: rgba(0, 40, 43, 0.25);
+    border: none;
+    border-radius: 5px;
+}
+
+.input-price input{
+    font-family: "Inter" , sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    width: 160px;
+    outline: none;
+    background-color: rgba(0, 40, 43, 0.25);
+    border: none;
+    border-radius: 5px;
+
+}
+
+.color-inputs h2{
+    font-weight: 400;
+}
+
+.color-inputs input{
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Inter" , sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    width: 160px;
+    outline: none;
+    background-color: rgba(0, 40, 43, 0.25);
+    border: none;
+    border-radius: 5px;
+}
+
+.color-inputs{
+    margin-top: 75px;   
+}
+
+.submit-colors{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submit-colors button{
+    background-color: black;
+    color: white;
+    height: 35px;
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-family: "Inter" , sans-serif;
+    cursor: pointer;
+}
+
+.submit-colors button:hover{
+    background-color: rgb(45, 45, 45);
+}
+
+.about-div{
+    margin-left:   50px;
+    margin-top: 25px;
+    color: rgba(0, 40, 43);
+    
+
+}
+
+.about-div p{
+    margin: 10px;
+    margin-left: 15px;
+    color: rgba(0, 40, 43);
+    font-weight: 400;
+
+}
+
+.cart-logo{
+    width: 570px;
+    margin-left: 885px;
+    opacity: 25%;
+}
+
+.popup-message{
+    margin-top: -50px;
+    background-color: rgba(0, 0, 139, 0.9);
+    padding: 6px 15px 10px 15px;
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.upper-margin-line{
+    background-color: rgba(3, 128, 137);
+    margin-top: 15px;
+    border: rgb(2, 118, 126) solid 2px;
+}
+
+.profile-div h1{
+    display: block;
+    font-weight: 500;
+    color: rgb(2, 118, 126);
+    font-size: 35px;
+    margin-bottom: 0px;
+
+}
+
+.profile-div h2{
+    font-weight: 500;
+    color: #02767e;
+    font-size: 20px;
+    margin: 1px 0px ;
+}
+
+.profile-image{
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+    border-radius: 50%;
+
+}
+
+.profile-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.profile-heading{
+    margin-top: 25px;
+    align-items: center;
+    display: flex;
+    
+}
+
+.profile-details{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.logout{
+    color: red;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.logout:hover{
+    color: brown;
+}
+
+.profile-page-div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.upload-profile-image{
+    margin-top: 200px;
+    display: inline-block;
+    margin-top: 60px;
+    margin-right: 100px;
+}
+
+.upload-profile-image input{
+
+    margin: 15px;
+    display: inline-block;
+}
+
+.upload-profile-image label{
+    font-weight: 500;
+}
+
+.uploadImage{
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+
+}
+
+
+.orderCancel{
+    color: red;
+    text-decoration: none;
+}

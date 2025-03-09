@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="/CSS/homePage.css">
+</head>
+<body>
+    <div class="container">
+    <div class="main">
+        <div class="nav-bar" style="height: 60px;">
+            <img src="../images/CART logo-01.png" alt="" class="logo">
+            <div class="redirect-links">
+                <a href="/homepage">Home</a>
+                <a href="/about">About</a>
+                <a href="/cart">Cart</a>
+                <a href="/profile">Your Account</a>
+            </div>
+        </div>
+        <div class="lower-div" >
+            <div class="right-side-div">
+                <% if(user.Orders.length === 0){ %>
+                    <h1 style="margin: 10px; color: rgba(0, 0, 0, 0.4); font-weight: 800;">No Orders Yet</h1>
+                <% } else { %>
+                    <h1 style="margin-top: 25px; margin-bottom: -40px;">Your Orders</h1>
+                    <div style="padding-bottom: 40px; margin-top: -10px">
+                        <% user.Orders.forEach(function(product){ %> 
+                            <div class="margin-cart" >
+                                <div class="vend-tshirt-display" style="; background-color: #<%= product.BGcolor %>; ">
+                                    <div class="vend-tshirt-img">
+                                        <img src="data:image/png;base64,<%= product.Image.toString('base64') %>" alt="">
+                                    </div>
+                                    <div class="vend-tshirt-description" style="background-color: #<%= product.PanelColor %>;">
+                                        <h1 style="margin-left: 0px; color: #<%= product.TextColor %>;"><%= product.Name %></h1>
+                                    </div>
+                                   
+                                </div>
+                                <div class="price-total" style=" height: 0px;">
+                                    <a href="/CancelOrder/<%= product._id %>" class="orderCancel">Cancel Order</a>
+                                    <h1 style="margin-left: 0px;">Order Details</h1>
+                                    <div class="price-total-div">
+                                        <h3>Total MRP</h3>
+                                        <h3>₹<%= ((product.Price - (product.Price * (product.Discount / 100))) * (user.Quantity.length || 1) + 60).toFixed(2) %></h3>
+                                    </div>
+                                    <div class="price-total-div">
+                                        <h3>Order Status:</h3>
+                                        <h3>Order Placed Successfully</h3>
+                                    </div>
+                                    <div class="price-total-div">
+                                        <h3>Quantities</h3>
+                                        <h3><%= user.Quantity.length %></h3>
+                                    </div>
+                                    <hr style="height: 1px; background-color: black;">
+                                    <div class="price-total-div" style="font-size: 15px;">
+                                        <h1 style="margin-left: 0px; font-size: 20px;">Expected Date Arrival</h1>
+                                        <h1 style="margin-right: 0px; font-size: 20px;">
+                                            <%= expectedArrivalDate %>
+                                        </h1>
+                                    </div>
+                                    
+                                </div>
+                                <div class="ordered-product-details">
+                    
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
+

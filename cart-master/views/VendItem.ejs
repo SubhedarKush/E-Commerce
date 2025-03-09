@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/homePage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+
+            <div class="nav-bar" style="height: 60px;">
+                <img src="./images/CART logo-01.png" alt="" class="logo">
+
+                
+                
+                <div class="redirect-links">
+                    <a href="/homepage">Home</a>
+            <a href="/about">About</a>
+            <a href="/cart">Cart</a>
+            <a href="/profile">Your Account</a>
+                </div>
+            </div>
+
+            <div class="lower-div">
+
+                <div class="left-side-div">
+
+                    <div class="sort-div" style="text-align: left;">
+                        <h1 style="font-size: 25px;">Admin Panel</h1>
+                    </div>
+                
+                    <div class="active-page" style="margin-top: 50px;">
+                        <a href="AllItems" >All Products</a>
+                        <a href="cart" class="all-products active">Create New</a>
+                    </div>
+                
+                    <div class="adminDiv" style="margin-top: 325px;">
+                        <a class="adminProducts" href="homepage">Buy Products</a>
+                    </div>
+                </div>
+                
+
+                <div class="right-side-div">
+                    <div class="admin-heading">
+                        <h1 >Create New Product</h1>
+                    </div>
+
+
+                    <form action="/productCreated" method="post" enctype="multipart/form-data">
+
+
+
+                    <div class="create-products">
+                    <h2>Product Details</h2>
+                    <h3>Product Image</h3>
+                    
+                    <input type="file" src="" alt="" name="Image" class="image-input" placeholder="Image">
+
+                </div>
+
+                
+                <div class="product-inputs">
+                    <input type="text" name="Name" id="" placeholder="Product Description upto 12 characters" class="input-product-description">
+                <div class="input-price">
+                <input type="text" name="Price" id="" placeholder="Price">
+                <input type="text" name="Discount" id="" placeholder="Discount Percentage">
+            
+            </div>
+
+            <div class="color-inputs">
+                <h2>Panel Color</h2>
+                <div>
+                    <input type="text" name="BGcolor" id="" placeholder="Background Color">
+                    <input type="text" name="PanelColor" id="" placeholder="Panel Color">
+                </div>
+                <div class="submit-colors">
+                    <input type="text" name="TextColor" id="" placeholder="Font Color">
+                    <button type="submit">Submit</button>
+            </div>
+            </div>
+
+        </div>
+        </form>
+            
+                    
+                
+            
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
+

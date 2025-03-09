@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/homePage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+
+            <div class="nav-bar" style="height: 60px;">
+                <img src="./images/CART logo-01.png" alt="" class="logo">
+
+                
+                
+                <div class="redirect-links">
+                    <a href="/homepage">Home</a>
+            <a href="/about">About</a>
+            <a href="/cart">Cart</a>
+            <a href="/profile">Your Account</a>
+                </div>
+            </div>
+
+            <div class="lower-div">
+                <div class="left-side-div">
+                    <div class="sort-div" style="text-align: left;">
+                        <h1 style="font-size: 25px;">Admin Panel</h1>
+                    </div>
+
+                    <div class="active-page" style="margin-top: 50px;">
+                        <a href="#" class="all-products active">All Products</a>
+                        <a href="VendItem">Create New</a>
+                    </div>
+
+                    <div class="adminDiv" style="margin-top: 325px;">
+                        <a class="adminProducts" href="homepage">Buy Products</a>
+                    </div>
+                </div>
+
+                <div class="right-side-div">
+                    <div class="margin" style="margin-top: 0px;">
+                        <div> 
+                            <a href="/deleteAllProducts" class="DeleteAll">Delete All</a>
+                        </div>
+                        
+
+                        <% if(products.length === 0) { %>
+                            <h1 style="font-size: 25px; margin: 10px; color: rgba(0, 0, 0, 0.4); font-weight: 800;">No Product is Listed yet...</h1>
+                        <% } else { %>
+                            <div class="TshirtDisplayDiv">
+                                <% products.forEach(function(product) { %>
+                                    <div class="tshirt-back">
+                                        <div class="tshirt-image" style="background-color: #<%= product.BGcolor %>;">
+                                            <img src="data:image/png;base64,<%= product.Image.toString('base64') %>" alt="">
+                                        </div>
+                                        <div class="tshirt-price" style="background-color: #<%= product.PanelColor %>;">
+                                            <div class="t-shirt-description">
+                                                <div class="price-display">
+                                                    <h1 style="margin-left: 10px; color: #<%= product.TextColor %>;"><%= product.Name %></h1>
+                                                    <h3 style="margin-left: 10px; color: #<%= product.TextColor %>;">₹<%= product.Price %></h3>
+                                                </div>
+                                                <div class="discount-display">
+                                                    <h3 style="font-size: 12px; color: #<%= product.TextColor %>;" class="discount">-<%= product.Discount %>%</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% }) %>
+                            </div>
+                        <% } %>
+                        
+                        
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var popup = document.getElementById('popup-message');
+        popup.style.display = 'block'; // Show the popup
+        setTimeout(function() {
+            popup.style.display = 'none'; // Hide the popup after 4 seconds
+        }, 2000);
+    });
+    </script>
+    
+</body>
+</html>

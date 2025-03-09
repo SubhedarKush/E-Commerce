@@ -1,0 +1,158 @@
+.main{
+    display: flex;
+    width: 1200px;
+    height: 600px;
+}
+
+form{
+    display: inline-block;
+    margin: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    height: 100vh; 
+}
+
+.user-info{
+    height: 100%;
+    width: 400px;
+    background-color: #00282b;
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    color: white;
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+   
+}
+
+.user-info h1{
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+.user-info h2{
+    font-size: large;
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+
+
+.logo{
+    float: inline-start;
+    width: 150px;
+    height: 83.57px;
+    margin: 0px;
+}
+
+.right-div{
+    margin: 0px;
+    width: 625px;
+    height: 100%;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.details-input{
+    text-align: center; 
+    margin-bottom: 100px; 
+}
+
+.user-redirect{
+    margin-top: 150px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    margin-left: -70px;
+}
+
+.user-redirect h1{
+    font-weight: 400;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.user-redirect button{
+    margin-top: 0px;
+    padding: 10px;
+    background-color: rgba(15, 164, 175, 0.4);
+    font-weight: 600;
+    border: none;
+    width: 100px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: 400;
+}
+
+.user-redirect button:hover{
+    background-color: rgba(3, 128, 137);
+    color: white;
+    
+}
+
+.logo-background{
+    float: inline-start;
+    width: 455px;
+    margin-top: 35px;
+    opacity: 25%;
+}
+
+.input-details{
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    opacity: 50%;
+    display: block;
+    margin:  8px auto;
+    outline: none;
+}
+
+.login-button{
+    margin-top: 6px;
+    padding: 7px;
+    background-color: rgba(16, 189, 202, 0.4);
+    font-weight: 600;
+    border: none;
+    width: 70px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 140px;
+    color: white;
+    outline: none;
+}
+
+.register-button{
+    margin-top: 6px;
+    padding: 7px;
+    background-color: rgba(16, 189, 202, 0.4);
+    font-weight: 600;
+    border: none;
+    width: 80px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 140px;
+    color: white;
+    outline: none;
+}
+
+.submit-route:hover{
+    background-color: rgba(1, 91, 98, 0.6);
+}
+
+.alertMessage{
+    text-align: left;
+    color: red;
+    font-size: 10px;
+    margin: 0;
+}

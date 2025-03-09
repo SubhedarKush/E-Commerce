@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="CSS/homePage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+
+            <div class="nav-bar" style="height: 60px;">
+                <img src="./images/CART logo-01.png" alt="" class="logo">
+                
+                <div class="redirect-links">
+                    <a href="/homepage">Home</a>
+            <a href="/about">About</a>
+            <a href="/cart">Cart</a>
+            <a href="/profile">Your Account</a>
+                </div>
+            </div>
+
+            <div class="lower-div">
+
+
+
+                
+
+                <div class="right-side-div">
+                    <% if(user.Cart.length === 0){ %>
+                        <h1 style="margin: 10px; color: rgba(0, 0, 0, 0.4); font-weight: 800;">Your Cart is empty right now...</h1>
+                    <% } else { %>
+                        <div>
+                            <h1>Your Cart</h1>
+                            <% user.Cart.forEach(function(productDetails){ %> 
+                            <div class="margin-cart" style="margin: 0px 0px -110px 0px">
+                                <div class="vend-tshirt-display" style="background-color: #<%= productDetails.BGcolor %>;">
+                                    <div class="vend-tshirt-img">
+                                        <a href="/delete/<%= productDetails._id %> " class="delete-button"><i class="fas fa-trash"></i></a>
+                                        <img src="data:image/png;base64,<%= productDetails.Image.toString('base64') %>" alt="">
+                                    </div>
+                                    <div class="vend-tshirt-description" style="background-color: #<%= productDetails.PanelColor %>;">
+                                        <h1 style="margin-left: 0px; color: #<%= productDetails.TextColor %>;"><%= productDetails.Name %></h1>
+                                        <div class="cart-item-quantity">
+                                            <div class="add-quantity">
+                                                <a href="/addQuantity/<%= productDetails._id %>">+</a>
+                                            </div>
+                                            <h1 style="color: #<%= productDetails.TextColor %>;"><%=  quantities[productDetails._id] || 1 %></h1>
+                                            <div class="sub-quantity">
+                                                <a href="/subQuantity/<%= productDetails._id %>">-</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr style="margin: 0px; margin-right: -10px; color: #<%= productDetails.TextColor %>;">
+                                    <div class="vend-tshirt-total" style="background-color: #<%= productDetails.PanelColor %>;">
+                                        <h1 style="margin-left: 0px; color: #<%= productDetails.TextColor %>;">Price</h1>
+                                        <h1 style="color: #<%= productDetails.TextColor %>;">₹<%= productDetails.Price %></h1>
+                                    </div>
+                                </div>
+                                <div class="price-total">
+                                    <h1 style="margin-left: 0px;">Price Breakdown</h1>
+                                    <div class="price-total-div">
+                                        <h3>Total MRP</h3>
+                                        <h3>₹<%= productDetails.Price * (quantities[productDetails._id] || 1) %></h3>
+                                    </div>
+                                    <div class="price-total-div">
+                                        <h3>Discount on MRP</h3>
+                                        <h3>-<%= productDetails.Discount %>%</h3>
+                                    </div>
+                                    <div class="price-total-div">
+                                        <h3>Shipping Charges</h3>
+                                        <h3>₹60</h3>
+                                    </div>
+                                    <hr style="height: 1px; background-color: black;">
+                                    <div class="price-total-div">
+                                        <h1 style="margin-left: 0px;">Total Amount</h1>
+                                        <h1 style="margin-right: 0px;">
+                                            ₹<%= ((productDetails.Price* (quantities[productDetails._id] || 1)) - ((productDetails.Price * (productDetails.Discount / 100))* (quantities[productDetails._id] || 1)) + 60).toFixed(2) %>
+                                        </h1>
+                                    </div>
+                                    <form action="/PlaceOrder/<%= productDetails._id %>" method="post">
+                                        <input type="submit" value="Place Order" class="PlaceOrderButton">
+                                    </form>
+                                </div>
+                            </div>
+                            <% }) %>
+                        </div>
+                    <% } %>
+                    
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
+
