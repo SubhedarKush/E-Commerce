@@ -1,0 +1,287 @@
+body{
+  margin-top: 0;
+  background: rgb(255, 255, 243);
+}
+/* top most nav bar */
+.topnavbar{
+  margin-top: 0;
+}
+
+.navbar-brand {
+    
+    display: flex;
+    align-items: center;
+}
+.navbar-brand img {
+    margin-right: 10px; /* Adjust as needed */
+}
+.navbar-brand h1 {
+    margin: 0;
+    font-size: 1.5rem; /* Adjust as needed */
+    color: white; /* Adjust as needed */
+}
+.navbar_bg{
+    background-color: rgb(45, 45, 46);
+    padding :  10px 20px ;
+}
+
+.info-section{
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  color: white;
+}
+
+.info-section:hover{
+  cursor: pointer;
+  
+  text-decoration: none;
+  color: rgb(218, 218, 218);
+  font-size: 17px;
+}
+.about-section{
+  width: 300px;
+} 
+.about-section form{
+  display: inline-block;
+} 
+
+
+/* sidenav bar  */
+
+.sidenav {
+  height: 100%;
+  width: 200px; 
+  position: fixed; 
+  left: 0;
+  margin-top: 40px;
+  background-color: rgb(64, 64, 65); 
+  overflow-x: hidden; 
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  border-bottom: #7d7c7c solid 1.5px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #888484;
+  display: block;
+}
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  border-bottom: #7d7c7c solid 1.5px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #888484;
+  display: block;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 16px;
+}
+
+.dropdown-container a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #888484;
+  display: block;
+}
+
+.dropdown-container a:hover {
+  color: #f1f1f1;
+}
+
+
+/* main page content  */
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+.inner-main{
+  padding-top: 80px;
+  margin-top: 30px;
+  margin-left: 25px;
+
+}
+.info-main{
+  margin-top: 50px;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+
+}
+
+.card {
+  display: grid;
+  grid-template-rows: max-content 5px 1fr;
+  text-align: center;
+  padding: 0 4px;
+
+ 
+}
+.card:hover{
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+
+}
+.home-cards{
+  border: 0 none ;
+  background-color: white;
+
+}
+.cards :hover{
+  cursor: pointer;
+}
+
+.content {
+  border-top: #888484 solid;
+}
+
+.item-description{
+  text-align: left;
+  border-top: #888484 solid;
+}
+.item-description h4,p,h6{
+  margin-top: -1px;
+}
+
+.add-button{
+  background-color: grey;
+  width: 100%;
+}
+
+.add-button:hover{
+  background-color: rgb(249, 181, 46);
+}
+
+/* Cart */
+.BuyNow{
+  margin-top: 15px;
+  display: inline-block;
+  margin-left: 1100px;
+  position: absolute;
+  bottom: 30px;
+}
+
+
+.card-content {
+  position: relative;
+}
+
+.remove-button {
+  margin: 0;
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  
+}
+
+.btn-outline-dark:hover{
+  background-color: rgba(206, 3, 3, 0.837);
+}
+
+
+/* footer */
+
+.footer-bar{
+  text-align: center;
+  background-color: #cdc9c9;
+  height: 50px;
+  margin-bottom: 0px;
+
+}
+
+.footer-bar p{
+  padding-top: 10px;
+  
+}
+
+footer {
+bottom: 0;
+position: relative;
+margin-top: 50px;
+width: 100%;
+z-index: -1;
+}
+
+
+.empty-cart{
+  height: 550px;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.empty-cart a{
+  text-decoration: none;
+  color: #888484;
+}
+
+.empty-cart a:hover{
+  color: rgb(77, 77, 77);
+}
+
+.empty-cart-heading{
+  color: #888484;
+}
+
+.carousel-inner{
+  margin-bottom: 50px;
+}
+
+.fixed-dimensions{
+  height: 600px;
+width: 800px;
+}
+
+
+.carousel-inner button{
+  margin: 0;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.carousel-caption{
+  color: black;
+  background-color: rgba(255, 255, 255, 0.362);
+}
+
+.login-route input{
+  background-color: #ffffff7a;
+}
+
+.login-route{
+  border: #888484ba solid;
+  border-radius: 50px;
+  padding: 50px;
+  width: 600px;
+  color: #6d6b6b;
+
+}
+
+.login-route .btn-outline-dark:hover{
+  background-color: rgb(65, 84, 63);
+}
